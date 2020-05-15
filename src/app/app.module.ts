@@ -6,13 +6,21 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
+import { ClarifaiComponent } from "./clarifai/clarifai.component";
+import { CoronavirusComponent } from "./coronavirus/coronavirus.component";
 import { HomeComponent } from "./home/home.component";
 import { MaterialModule } from "./material.module";
 import { RoutingModule } from "./routing.module";
 import { SnakeComponent } from "./snake/snake.component";
 
 @NgModule({
-  declarations: [AppComponent, SnakeComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    SnakeComponent,
+    HomeComponent,
+    CoronavirusComponent,
+    ClarifaiComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

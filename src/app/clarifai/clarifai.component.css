@@ -1,0 +1,25 @@
+mat-icon:hover,
+span:hover {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  border: 1px solid grey;
+  padding: 10px;
+  width: 50%;
+  margin: auto auto;
+  margin-top: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="file"] {
+  visibility: hidden
+}

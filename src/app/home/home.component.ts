@@ -16,6 +16,12 @@ export class HomeComponent implements OnInit {
       case 1:
         this.router.navigateByUrl("/snake");
         break;
+      case 2:
+        this.router.navigateByUrl("/clarifai");
+        break;
+      case 3:
+        this.router.navigateByUrl("/coronavirus");
+        break;
     }
   }
 }

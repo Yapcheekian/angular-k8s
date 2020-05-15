@@ -1,0 +1,20 @@
+<mat-toolbar color='primary'>
+  <mat-icon (click)='back()'>keyboard_backspace</mat-icon>
+  <span (click)='back()'>Back</span>
+</mat-toolbar>
+<div class='container'>
+  <img *ngIf='imagePreview' [src]='imagePreview'>
+  <form [formGroup]='form' *ngIf='!imagePreview'>
+    <button mat-stroked-button type="button" (click)="filePicker.click()">Pick Image</button>
+    <input type="file" #filePicker (change)="OnImagePicked($event)">
+  </form>
+</div>
+<div style='display: flex; justify-content: center; margin-top: 20px;'>
+  <button mat-stroked-button type="button" (click)='submit()'>Submit</button>
+</div>
+<div *ngIf='!loading' style='display: flex; justify-content: center; margin-top: 20px;'>
+  <span *ngFor='let result of results' style='padding: 5px'>{{ result }}</span>
+</div>
+<div *ngIf='loading' style='display: flex; justify-content: center; margin-top: 20px;'>
+  <mat-spinner></mat-spinner>
+</div>

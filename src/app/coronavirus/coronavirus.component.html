@@ -1,0 +1,23 @@
+<mat-toolbar color='primary'>
+  <mat-icon (click)='back()'>keyboard_backspace</mat-icon>
+  <span (click)='back()'>Back</span>
+</mat-toolbar>
+<ng-template [ngIf]="data.length > 0">
+  <table mat-table [dataSource]="data">
+    <ng-container matColumnDef="country">
+      <th mat-header-cell *matHeaderCellDef>Country</th>
+      <td mat-cell *matCellDef="let job">
+        {{ job.country }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="totalCases">
+      <th mat-header-cell *matHeaderCellDef>Total cases</th>
+      <td mat-cell *matCellDef="let job">
+        {{ job.latestTotalCases}}
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</ng-template>
